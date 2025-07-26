@@ -1,6 +1,9 @@
 # Calculadora de ROI - Flash ID
 
+![Demonstração do site da Flash ID](./read-me.png)
+
 > Uma landing page interativa para um SaaS de gestão de etiquetas para restaurantes, incluindo uma calculadora para simular a economia gerada pela redução de desperdício de alimentos.
+
 
 ## 📜 Sobre o Projeto
 
