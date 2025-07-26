@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap');
+:root{--primary-color:#dc3e38;--primary-hover:#c0302c;--dark-color:#111827;--text-color:#374151;--light-bg:#f9fafb;--white-color:#ffffff;--border-color:#e5e7eb;--font-family:'Poppins',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-family);background-color:var(--white-color);color:var(--text-color);line-height:1.6;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;position:relative;overflow-x:hidden}
+body::before{content:'';position:fixed;top:0;left:0;width:1000px;height:1000px;background:radial-gradient(circle,rgba(220,62,56,0.12) 0%,transparent 60%);filter:blur(120px);z-index:-1;animation:background-glow 30s infinite alternate ease-in-out;will-change:transform}
+@keyframes background-glow{from{transform:translate(-30%,-30%) rotate(0deg)}to{transform:translate(30%,30%) rotate(180deg)}}
+@keyframes magma-move-1{to{transform:translate(150px,100px) scale(1.2)}}
+@keyframes magma-move-2{to{transform:translate(-100px,-150px) scale(0.9)}}
+@keyframes magma-move-3{to{transform:translate(100px,-100px) scale(1.1)}}
+@keyframes avatar-float{from{transform:translateY(-10px)}to{transform:translateY(10px)}}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+.section-header{text-align:center;margin-bottom:64px;max-width:650px;margin-left:auto;margin-right:auto}
+.section-header h2{font-size:2.5rem;color:var(--dark-color);font-weight:800;margin-bottom:16px}
+.section-header p{font-size:1.125rem}
+section{padding:96px 0}
+.cta-button{display:inline-flex;align-items:center;justify-content:center;padding:12px 24px;border-radius:9999px;text-decoration:none;font-weight:600;transition:all .2s ease-in-out;border:1px solid transparent;cursor:pointer}
+.cta-button.primary{background-color:var(--primary-color);color:var(--white-color);box-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1)}
+.cta-button.primary:hover{background-color:var(--primary-hover);transform:translateY(-2px);box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05)}
+.cta-button.secondary{background-color:var(--white-color);color:var(--dark-color);border-color:var(--border-color)}
+.cta-button.secondary:hover{border-color:var(--primary-color);color:var(--primary-color);transform:translateY(-2px)}
+.cta-button.large{padding:14px 28px;font-size:1rem}
+.cta-button.small{padding:8px 16px}
+.cta-button.full-width{width:100%}
+.header{background-color:transparent;padding:32px 24px;position:sticky;top:0;z-index:1000;width:100%;border-bottom:1px solid transparent;transition:all .4s ease}
+.header.scrolled{background-color:rgba(255,255,255,.8);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--border-color);box-shadow:0 4px 6px -1px rgba(0,0,0,.05)}
+.main-nav{display:flex;justify-content:space-between;align-items:center;width:100%;max-width:1180px;margin:0 auto}
+.logo{display:inline-block;line-height:0}
+.logo-animated{height:50px;width:auto}
+.nav-links{display:flex;list-style:none;gap:32px}
+.nav-links a{text-decoration:none;color:var(--text-color);font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--primary-color)}
+.nav-actions{display:flex;align-items:center;gap:16px}
+.hero-section.new-hero-layout{padding-top:120px;padding-bottom:120px}
+.new-hero-layout .hero-content{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;text-align:left}
+.hero-avatar-pane{text-align:center}
+.new-hero-layout .hero-image{max-width:450px;width:100%;animation:avatar-float 6s infinite alternate ease-in-out;filter:drop-shadow(0 25px 25px rgba(0,0,0,.15))}
+.new-hero-layout .hero-title{font-size:3.5rem;margin:0 0 24px 0;max-width:100%}
+.new-hero-layout .hero-subtitle{margin:0 0 32px 0;max-width:500px}
+.new-hero-layout .hero-buttons{justify-content:flex-start;margin:0}
+.live-carousel-section{position:relative;padding:120px 0;background-color:var(--primary-color);overflow:hidden}
+.magma-background{position:absolute;inset:0;z-index:0;filter:blur(100px);opacity:.8}
+.magma-blob-1,.magma-blob-2,.magma-blob-3{position:absolute;border-radius:50%}
+.magma-blob-1{background:#ff6b6b;width:500px;height:500px;top:-20%;left:-10%;animation:magma-move-1 20s infinite alternate ease-in-out}
+.magma-blob-2{background:#c0302c;width:400px;height:400px;top:40%;left:70%;animation:magma-move-2 25s infinite alternate ease-in-out}
+.magma-blob-3{background:#e94d48;width:300px;height:300px;top:60%;left:10%;animation:magma-move-3 18s infinite alternate ease-in-out}
+
+/* ALTERAÇÕES CRUCIAIS A PARTIR DAQUI */
+.two-column-layout{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:64px;
+  align-items:center; /* Alinha as duas colunas inteiras pelo centro, verticalmente */
+}
+
+.section-header-left{text-align:left;background:rgba(255,255,255,.1);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:24px;border:1px solid rgba(255,255,255,.2);padding:40px;box-shadow:0 8px 32px 0 rgba(0,0,0,.3);display:flex;flex-direction:column;justify-content:center;min-height:500px}
+.section-header-left h2{font-size:3rem;color:var(--white-color);font-weight:800;margin-bottom:16px}
+.section-header-left p{font-size:1.25rem;color:rgba(255,255,255,.9);max-width:400px}
+
+.live-carousel-wrapper{
+  position:relative;
+  z-index:1;
+  min-height:500px;
+  height:500px; /* Mantém a altura fixa da área do carrossel */
+  display: flex; /* Transforma o wrapper em um contêiner flexível */
+  align-items: center; /* Centraliza o conteúdo (carousel-item) verticalmente */
+  justify-content: center; /* Centraliza o conteúdo (carousel-item) horizontalmente */
+}
+
+.carousel-item{
+  position:absolute; /* Mantém para as animações do Framer Motion */
+  display:flex;
+  flex-direction:column; /* Stack icon and text */
+  align-items:center; /* Center them horizontally */
+  text-align:center;
+  width:100%; /* Permite que o width seja afetado por transform e flex */
+  
+  /* Ajuste vertical do conteúdo DENTRO da área de 500px do carrossel */
+  /* Este valor empurra todo o conjunto (ícone+texto) para CIMA. */
+  /* Começamos com um valor negativo para subir o carrossel. */
+  transform: translateY(-80px); /* Ajuste: Mova o conteúdo completo -80px para cima */
+  /* Removidos `top`, `left` diretos aqui. A centralização é feita no `live-carousel-wrapper`.
+     Isso garante que `carousel-item` esteja na posição correta ANTES do `translateY`. */
+}
+
+
+.carousel-item .card-icon-wrapper{
+  /* Não é mais position: absolute aqui. É um item flex do .carousel-item */
+   /* A margem negativa puxa o texto para cima, sobrepondo o ícone. */
+  margin-bottom: -80px; /* Ajuste este valor. Quanto maior o negativo, mais o texto sobe. */
+}
+
+.carousel-item .feature-icon{
+  /* Ajusta o tamanho VISUAL do ícone para que ele não ocupe todos os 500px de layout. */
+  width: 800px; /* Reduza este valor se o ícone ainda estiver muito grande no layout */
+  height: 480px;
+  filter:drop-shadow(0 20px 30px rgba(0,0,0,.4));
+  /* Talvez um margin-top negativo adicional para mover o ícone um pouco mais para cima dentro do seu espaço flex */
+  /* margin-top: -50px; */
+}
+
+.carousel-item .card-text-content{
+  position:relative; /* Mantido para z-index ou transform. Não está mais posicionado 'bottom:0'. */
+  z-index: 2; /* Garante que o texto fique acima do ícone */
+  text-align:center; /* Centraliza o texto horizontalmente */
+  padding: 0 20px 20px; /* Padding na parte inferior para respiro */
+  color:var(--white-color); /* Garante que o texto seja branco */
+}
+
+.carousel-item h3{font-size:2.5rem;font-weight:800;color:inherit;margin-bottom:16px;text-shadow:0 3px 15px rgba(0,0,0,.6)}
+.carousel-item p{font-size:1.2rem;color:rgba(255,255,255,.9);line-height:1.6;max-width:450px;margin: 0 auto;}
+
+
+.pricing-section{background-color:var(--light-bg)}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px;max-width:900px;margin:0 auto;align-items:center}
+.pricing-card{background-color:var(--white-color);padding:40px;border-radius:16px;border:1px solid var(--border-color);position:relative}
+.pricing-card.popular{border-color:var(--primary-color);transform:scale(1.05);z-index:10}
+.popular-badge{position:absolute;top:-16px;left:50%;transform:translateX(-50%);background-color:var(--primary-color);color:var(--white-color);padding:4px 12px;border-radius:9999px;font-size:.875rem;font-weight:600}
+.pricing-card h3{font-size:1.25rem;font-weight:600;text-align:center;color:var(--dark-color)}
+.plan-subtitle{font-size:.9rem;font-weight:500;color:var(--text-color);text-align:center;margin-top:-12px;margin-bottom:16px}
+.price{font-size:3rem;font-weight:800;color:var(--dark-color);text-align:center;margin:16px 0 24px 0}
+.price span{font-size:1rem;color:var(--text-color);font-weight:500}
+.pricing-card ul{list-style:none;margin-bottom:32px;padding-left:0}
+.pricing-card ul li{margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.check-icon{color:var(--primary-color);font-weight:bold}
+.contact-section{background-color:var(--primary-color);padding:120px 0}
+.contact-container{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1100px;text-align:left}
+.contact-text-pane h2{font-size:2.8rem;font-weight:800;color:var(--white-color);margin-bottom:16px;line-height:1.2}
+.contact-text-pane p{font-size:1.125rem;color:rgba(255,255,255,.9);max-width:450px}
+.contact-form{display:flex;flex-direction:column;gap:20px}
+.contact-form input{width:100%;padding:16px 20px;border:1px solid transparent;border-radius:12px;font-size:1rem;font-family:var(--font-family);transition:all .2s ease;background-color:rgba(255,255,255,.1);color:var(--white-color)}
+.contact-form input::placeholder{color:rgba(255,255,255,.7)}
+.contact-form input:focus{outline:none;background-color:rgba(255,255,255,.2);box-shadow:0 0 0 4px rgba(255,255,255,.2)}
+.form-submit-btn-final{padding-top:16px!important;padding-bottom:16px!important;font-size:1.125rem!important;background-color:var(--white-color)!important;color:var(--primary-color)!important}
+.form-submit-btn-final:hover{background-color:#f0f0f0!important;transform:translateY(-2px)}
+.faq-section{background-color:var(--light-bg)}
+.faq-accordion{max-width:800px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border-color);padding:16px 0;cursor:pointer}
+.faq-question{font-weight:600;font-size:1.25rem;display:flex;justify-content:space-between;align-items:center;color:var(--dark-color);transition:color .2s ease}
+.faq-item:hover .faq-question{color:var(--primary-color)}
+.faq-icon-wrapper{color:var(--text-color);transition:color .2s ease}
+.faq-item:hover .faq-icon-wrapper{color:var(--primary-color)}
+.faq-answer{overflow:hidden}
+.faq-content{padding:0 8px;color:var(--text-color)}
+.faq-content p,.faq-content ul{margin-top:16px}
+.faq-content ul{list-style:none;padding-left:0}
+.faq-content li{padding-left:24px;position:relative;margin-bottom:.75em}
+.faq-content li::before{content:'✓';color:var(--primary-color);position:absolute;left:0;font-weight:700}
+.footer.new-footer{background-color:var(--primary-color);color:var(--white-color);padding:32px 0}
+.new-footer .footer-container{display:flex;justify-content:space-between;align-items:center}
+.new-footer p{color:rgba(255,255,255,.9)}
+.social-links{display:flex;gap:16px}
+.social-links a{opacity:.8;transition:opacity .2s ease}
+.social-links a:hover{opacity:1}
+
+/* MEDIA QUERIES - RESPONSIVIDADE */
+@media (max-width:992px){
+  .new-hero-layout .hero-content{grid-template-columns:1fr;text-align:center}
+  .new-hero-layout .hero-buttons{justify-content:center}
+  .new-hero-layout .hero-avatar-pane{order:-1;margin-bottom:48px}
+}
+
+@media (max-width:768px){
+  .nav-links,.nav-actions{display:none}
+  .hero-title{font-size:2.5rem}
+  .hero-subtitle{font-size:1.125rem}
+  
+  .two-column-layout{
+    grid-template-columns:1fr; /* Muda para uma única coluna em mobile */
+    text-align:center;
+    gap:48px
+  }
+  
+  /* Ajustes específicos para a seção Ecosystem em mobile */
+  .section-header-left {
+    text-align: center; /* Centraliza o texto no card da esquerda em mobile */
+    min-height: auto; /* Remove a altura mínima fixa em mobile se quiser */
+    padding: 30px; /* Ajusta o padding para telas menores */
+  }
+  .section-header-left p {
+    max-width: 100%; /* Permite que o parágrafo ocupe toda a largura em mobile */
+  }
+
+  .carousel-item .feature-icon {
+    width: 250px; /* Diminui o ícone para caber melhor em telas menores */
+    height: 250px; /* Se o ícone for quadrado, manter largura e altura iguais */
+  }
+  /* Ajusta a margem negativa do ícone para mobile para evitar corte do texto embaixo */
+  .carousel-item .card-icon-wrapper {
+    margin-bottom: -80px; /* Menos negativo para mobile para que o texto não suba tanto */
+  }
+  .carousel-item .card-text-content {
+    /* Padding para o texto em mobile */
+    padding: 0 15px 15px;
+  }
+
+
+  .pricing-grid{grid-template-columns:1fr}
+  .pricing-card.popular{transform:scale(1)}
+  .contact-container{grid-template-columns:1fr;text-align:center;gap:48px}
+  .contact-text-pane p{max-width:100%}
+  .footer-container{flex-direction:column;gap:16px}
+  .faq-question{font-size:1.1rem}
+}

@@ -1,13 +1,21 @@
-# React + Vite
+# Calculadora de ROI - Flash ID
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Uma landing page interativa para um SaaS de gestão de etiquetas para restaurantes, incluindo uma calculadora para simular a economia gerada pela redução de desperdício de alimentos.
 
-Currently, two official plugins are available:
+## 📜 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este projeto é a vitrine do **Flash ID**, um sistema SaaS projetado para otimizar a gestão de etiquetas em restaurantes, focando na prevenção de perdas por validade. O site não apenas apresenta a solução, mas também oferece uma ferramenta de valor imediato: uma **calculadora de Retorno sobre o Investimento (ROI)**. Com ela, potenciais clientes podem simular os custos atuais com perdas de alimentos e visualizar a economia que o Flash ID pode proporcionar.
 
-## Expanding the ESLint configuration
+## ✨ Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# site-flashid
+-   **Landing Page Responsiva:** Apresentação clara da proposta de valor do SaaS.
+-   **Calculadora de ROI Interativa:** Ferramenta para calcular perdas com alimentos vencidos e o potencial de economia.
+-   **Design Moderno:** Interface construída com React e estilizada para uma experiência de usuário agradável.
+-   **Animações com CSS:** Elementos animados para tornar a navegação mais dinâmica.
+
+## 🛠️ Tecnologias Utilizadas
+
+-   **Frontend:** React.js
+-   **Build Tool:** Vite
+-   **Estilização:** CSS puro com Variáveis CSS
+-   **Linguagem:** JavaScript (JSX)
